@@ -1,0 +1,64 @@
+name: "\u2705 APH-Profiler Test Checklist (Console)"
+description: Run through APH-Profiler's Console test checklist and report results
+title: '[TEST][Console] '
+labels:
+- testing
+assignees:
+- MPHONlC
+body:
+- type: markdown
+  attributes:
+    value: Thanks for testing **APH-Profiler** on Console! Check off everything you actually tested and confirmed working. Anything broken or partly working, describe it in the notes field at the end instead of checking it off.
+- type: input
+  id: version
+  attributes:
+    label: Add-on version
+    placeholder: e.g. 2026.09.29.21.48
+  validations:
+    required: true
+- type: dropdown
+  id: platform
+  attributes:
+    label: Platform
+    options:
+    - Console (Xbox)
+    - Console (PlayStation)
+  validations:
+    required: true
+- type: checkboxes
+  id: console_tests
+  attributes:
+    label: Console tests confirmed working
+    options:
+    - label: 'Start/stop: /aphp, play 20 seconds, /aphpstop.'
+    - label: 'Messages: Type /aphp twice, then /aphpstop twice, and /aphp again right after a stop.'
+    - label: 'Chat Logs: Turn off Chat Logs in the settings, type /aphp and /aphpstop, then press Reset to Defaults.'
+    - label: 'Settings buttons: In settings press Start Recording, Open Results and Stop Recording.'
+    - label: 'Results: /aphpreport.'
+    - label: 'Scan length: Change the Scan length dropdown between Until I press Stop and Timed.'
+    - label: 'Timed scan: Settings: Scan length timed, Timed scan 10 s. Start.'
+    - label: 'Until stop: Scan length: until Stop. Start and wait 2 minutes.'
+    - label: 'Memory guard: Start a scan with add-on memory high.'
+    - label: 'Window: /aphpwindow.'
+    - label: 'Controller: Settings > Open Results. Try A, X, Y, LB, RB, LT/RT, d-pad left/right, press R3 then move the right stick, press L3 then move the left stick, then B.'
+    - label: 'Timeline: Press RB to open the timeline, then use the d-pad and LT/RT.'
+    - label: 'Window lock and size: Turn Lock the window in place on and try to drag the window; turn it off, resize it, then press Reset Window Size.'
+    - label: 'Debug logger quiet: On console with LibDebugLogger installed, log in.'
+    - label: 'No export: Look in settings for Export Last Result.'
+    - label: 'LibDebugLogger: Look at Send runs to LibDebugLogger in settings.'
+    - label: 'Wipe: Wipe Last Run, then Wipe All Results.'
+    - label: 'Results filters: Toggle Leave APH-Profiler out of its own results and Leave libraries out of the results, and run a scan.'
+    - label: 'Open after scan: Turn Open the results window after a scan off, then run a scan.'
+    - label: 'Read limits: Move Frames read per tick, Add-ons listed in the results, Functions kept per add-on, Scans kept and Add-ons kept per scan, tick Show the previous scan underneath, then scan.'
+    - label: 'Settings: Change Scans kept, Add-ons listed, Show the previous scan underneath.'
+    - label: 'Reset to Defaults: Change several settings and press Reset to Defaults.'
+    - label: 'Cleanup: After a scan finishes, watch Lua memory.'
+    - label: 'Library Warning: On a fresh install (never seen this warning before), disable LibAddonMenu-2.0 (PC) or LibHarvensAddonSettings (console), then open Settings or reload twice in a row.'
+    - label: 'Slice details: Open the Timeline after a scan (RB) and pan left and right.'
+    - label: 'Red dangerous buttons: Open the settings and look at Reset Window Size, Reset to Defaults, Wipe Last Run and Wipe All Results.'
+- type: textarea
+  id: notes
+  attributes:
+    label: Anything broken, partly working, or not tested
+    description: 'One line per issue: which test, what happened instead of Expected.'
+    placeholder: 'e.g. PC-L-04 Bug report: popup opened but API version line was blank'
