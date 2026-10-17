@@ -11,7 +11,7 @@ APHProfilerCore = APHProfilerCore or {}
 local APHP = APHProfilerCore
 
 APHP.name = "APH-Profiler"
-APHP.VERSION = "2026.10.15.14.36"
+APHP.VERSION = "2026.10.18.01.41"
 APHP.KEYBIND_LAYER = "APH-Profiler"
 
 function APHP.L(key, ...)
