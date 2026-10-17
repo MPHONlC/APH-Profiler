@@ -4,7 +4,7 @@
 ## Author: |ca500f3A|r|cb400e6P|r|cc300daH|r|cd200cdO|r|ce100c1NlC|r
 ## APIVersion: 101051 101052
 ## SavedVariables: APHProfiler
-## DependsOn: LibAPH>=26100607
+## DependsOn: LibAPH>=26100717
 ## OptionalDependsOn: LibAddonMenu-2.0 LibHarvensAddonSettings LibDebugLogger
 ## Description: |cfa9c1bMeasures which add-on is spending your frame time, parsed a slice at a time so the reading itself never stutters.|r |cCCFF00Usage: /aphp /aphpstop /aphpreport|r
 
